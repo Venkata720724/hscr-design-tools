@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { -webkit-font-smoothing: antialiased; }
+  body { @apply bg-white text-ink font-sans; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ink text-white text-sm font-medium px-5 py-2 rounded-lg 
+           hover:bg-neutral-800 transition-colors duration-150 cursor-pointer border-none;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-muted text-sm font-normal px-3 py-2 rounded-lg
+           hover:bg-soft hover:text-ink transition-colors duration-150 cursor-pointer border-none;
+  }
+  .input-field {
+    @apply w-full border border-line rounded-lg px-3 py-2 text-sm text-ink
+           placeholder-muted focus:outline-none focus:border-brand transition-colors;
+  }
+  .sim-row {
+    @apply grid items-center py-4 border-b border-line cursor-pointer
+           hover:bg-neutral-50 transition-colors duration-100 px-2 -mx-2 rounded;
+  }
+}
